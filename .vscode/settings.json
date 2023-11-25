@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "send_data_nu.h": "c",
+        "manage_conn.h": "c"
+    },
+    "cmake.configureOnOpen": false
+}

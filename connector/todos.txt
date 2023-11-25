@@ -1,0 +1,7 @@
+TODOS:
+
+- implement rcv_instr
+- try reconnecting once server closes connection/error
+- handle send functions incoming data
+- Ensure all remaining data is send when free_conn_nu is called 
+  
