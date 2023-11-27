@@ -1,16 +1,14 @@
-
-
 typedef struct nb_buffer{
     struct buffer_node *head;
     struct buffer_node *tail;
     unsigned len;
-}nb_buffer ;
+}nb_buffer;
 
 typedef struct buffer_node{
     struct buffer_node *next;
     struct buffer_node *prev;
     unsigned data;
-}buffer_node ;
+}buffer_node;
 
 unsigned nb_buffer_dequeue(nb_buffer *buf);
 

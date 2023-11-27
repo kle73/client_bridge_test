@@ -62,13 +62,13 @@ static void rcv_handler(struct mg_connection *c, int ev, void *ev_data, void *fn
     // TODO
     // extract data
     // place in buffer for rcv_instr
-    /*
+    const int buffer_len = 68;
     struct mg_ws_message *wm = (struct mg_ws_message *) ev_data;
-    jsmn_parser parser;
-    jsmntok_t tokens[20];
-    jsmn_init(&parser);
-    jsmn_parse(&parser, wm->data.ptr, wm->data.len, tokens, 20);
-    */
+    char data[32];
+    snprintf(data, 32, "%.*s", (int) wm->data.len-buffer_len-2, wm->data.ptr+buffer_len);
+    int i = atoi(data);
+    nb_buffer_enqueue(&instr_buffer, (unsigned)i);
+    
   }
   /*
   if (ev == MG_EV_CLOSE) {

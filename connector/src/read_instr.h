@@ -1,2 +1,1 @@
-
-unsigned *read_next_instr();
+unsigned read_next_instr();

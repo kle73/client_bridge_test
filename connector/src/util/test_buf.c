@@ -3,7 +3,7 @@
 
 int main(){
     printf("hallo\n");
-    nb_buffer buf;
+    struct nb_buffer buf;
     int a = nb_buffer_init(&buf);
     printf("hallo, %d\n", a);
     unsigned res;
@@ -11,12 +11,12 @@ int main(){
     if (res == 0) printf("null\n");
     unsigned i = 11;
     nb_buffer_enqueue(&buf, i);
+    printf("fisrt: %d\n", nb_buffer_dequeue(&buf));
     unsigned j = 22;
     nb_buffer_enqueue(&buf, j);
     unsigned k = 33;
     nb_buffer_enqueue(&buf, k);
 
-    printf("fisrt: %d\n", nb_buffer_dequeue(&buf));
     printf("second: %d\n", nb_buffer_dequeue(&buf));
     printf("third: %d\n", nb_buffer_dequeue(&buf));
 
