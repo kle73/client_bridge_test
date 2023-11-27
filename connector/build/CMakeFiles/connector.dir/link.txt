@@ -1,2 +1,0 @@
-/usr/bin/ar qc libconnector.a  CMakeFiles/connector.dir/src/send_data_nu.c.o CMakeFiles/connector.dir/src/manage_conn.c.o CMakeFiles/connector.dir/src/mongoose/mongoose.c.o
-/usr/bin/ranlib libconnector.a

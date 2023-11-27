@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "send_data_nu.h": "c",
-        "manage_conn.h": "c"
+        "manage_conn.h": "c",
+        "tuple": "c"
     },
     "cmake.configureOnOpen": false
 }

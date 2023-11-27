@@ -1,3 +1,0 @@
-/home/karl/CODE/client_bridge_test/connector/build/CMakeFiles/rebuild_cache.dir
-/home/karl/CODE/client_bridge_test/connector/build/CMakeFiles/edit_cache.dir
-/home/karl/CODE/client_bridge_test/connector/build/CMakeFiles/connector.dir
