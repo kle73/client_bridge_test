@@ -8459,7 +8459,10 @@ static void mg_ws_cb(struct mg_connection *c, int ev, void *ev_data,
   (void) fn_data;
   (void) ev_data;
 }
-
+/**
+ * this function was changed in order to include the remote port address into
+ * the connection header
+*/
 struct mg_connection *mg_ws_connect(struct mg_mgr *mgr, const char *url,
                                     mg_event_handler_t fn, void *fn_data,
                                     const char *fmt, ...) {
@@ -8469,14 +8472,24 @@ struct mg_connection *mg_ws_connect(struct mg_mgr *mgr, const char *url,
     struct mg_str host = mg_url_host(url);
     mg_random(nonce, sizeof(nonce));
     mg_base64_encode((unsigned char *) nonce, sizeof(nonce), key, sizeof(key));
+
+    /**
+     * changed:
+     *  byte ordering from network order to machine order
+    */
+    u_int16_t cache_port = c->rem.port;
+    u_int16_t rem_port = cache_port << 8;
+    rem_port += cache_port >> 8;
+  
     mg_xprintf(mg_pfn_iobuf, &c->send,
                "GET %s HTTP/1.1\r\n"
                "Upgrade: websocket\r\n"
-               "Host: %.*s:9090\r\n"
+               "Host: %.*s:%d\r\n"
                "Connection: Upgrade\r\n"
                "Sec-WebSocket-Version: 13\r\n"
                "Sec-WebSocket-Key: %s\r\n",
-               mg_url_uri(url), (int) host.len, host.ptr, key);
+               mg_url_uri(url), (int) host.len, host.ptr, (int)rem_port, key);
+                                                          // changed
     if (fmt != NULL) {
       va_list ap;
       va_start(ap, fmt);

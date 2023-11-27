@@ -11,7 +11,7 @@ int main(){
     if (res == 0) printf("null\n");
     unsigned i = 11;
     nb_buffer_enqueue(&buf, i);
-    printf("fisrt: %d\n", nb_buffer_dequeue(&buf));
+    printf("first: %d\n", nb_buffer_dequeue(&buf));
     unsigned j = 22;
     nb_buffer_enqueue(&buf, j);
     unsigned k = 33;

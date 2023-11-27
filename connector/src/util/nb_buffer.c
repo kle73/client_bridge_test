@@ -23,6 +23,9 @@ unsigned nb_buffer_dequeue(nb_buffer *buf){
         if (first->next != NULL){
             first->next->prev = buf->tail;
         }
+        if (buf->len == 1){
+            buf->head = buf->tail;
+        }
         free(first);
         buf->len--;
         pthread_mutex_unlock(&lock);
