@@ -1,6 +1,4 @@
-#include "connector/src/send_data_nu.h"
-#include "connector/src/read_instr.h"
-#include "connector/src/manage_conn.h"
+#include "connector/src/connector.h"
 #include <stdio.h>
 #include <unistd.h>
 

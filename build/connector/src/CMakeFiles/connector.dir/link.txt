@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libconnector.a CMakeFiles/connector.dir/connector.c.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libconnector.a
