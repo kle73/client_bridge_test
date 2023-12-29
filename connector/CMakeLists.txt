@@ -1,12 +1,5 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(connector VERSION 0.1.0 LANGUAGES C)
+cmake_minimum_required(VERSION 3.10)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/mongoose)
+project(Connector)
 
-add_library(connector STATIC 
-    src/send_data_nu.c 
-    
-    src/manage_conn.c
-    src/mongoose/mongoose.c
-)
-
+add_subdirectory(src)

@@ -1,3 +1,6 @@
+#ifndef NB_BUFFER_H
+#define NB_BUFFER_H
+
 typedef struct nb_buffer{
     struct buffer_node *head;
     struct buffer_node *tail;
@@ -17,3 +20,5 @@ int nb_buffer_enqueue(nb_buffer *buf, unsigned u);
 int nb_buffer_init(nb_buffer *buf);
 
 void nb_buffer_clean(nb_buffer *buf);
+
+#endif

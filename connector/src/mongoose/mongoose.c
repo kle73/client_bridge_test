@@ -8480,16 +8480,16 @@ struct mg_connection *mg_ws_connect(struct mg_mgr *mgr, const char *url,
     u_int16_t cache_port = c->rem.port;
     u_int16_t rem_port = cache_port << 8;
     rem_port += cache_port >> 8;
-  
+    
     mg_xprintf(mg_pfn_iobuf, &c->send,
                "GET %s HTTP/1.1\r\n"
                "Upgrade: websocket\r\n"
-               "Host: %.*s:%d\r\n"
+               "Host: %.*s:%d\r\n"      /* changed */
                "Connection: Upgrade\r\n"
                "Sec-WebSocket-Version: 13\r\n"
                "Sec-WebSocket-Key: %s\r\n",
                mg_url_uri(url), (int) host.len, host.ptr, (int)rem_port, key);
-                                                          // changed
+                                                          /* changed */
     if (fmt != NULL) {
       va_list ap;
       va_start(ap, fmt);

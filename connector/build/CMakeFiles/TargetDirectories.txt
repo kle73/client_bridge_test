@@ -1,0 +1,11 @@
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/CMakeFiles/edit_cache.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/CMakeFiles/rebuild_cache.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/src/CMakeFiles/connector.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/src/CMakeFiles/edit_cache.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/src/CMakeFiles/rebuild_cache.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/src/util/CMakeFiles/util.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/src/util/CMakeFiles/edit_cache.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/src/util/CMakeFiles/rebuild_cache.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/src/mongoose/CMakeFiles/mongoose.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/src/mongoose/CMakeFiles/edit_cache.dir
+/Users/karlkoerner/CODE/Nautilus/client_bridge_test/connector/build/src/mongoose/CMakeFiles/rebuild_cache.dir
